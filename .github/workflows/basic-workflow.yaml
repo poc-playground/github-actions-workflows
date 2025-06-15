@@ -29,11 +29,11 @@ on:
         description: "Is your favorite color blue"
         required: true
         type: boolean
-      environment:
-        description: "Environments available"
-        required: true
-        type: environments
-        type: string
+      # environment:
+      #   description: "Environments available"
+      #   required: true
+      #   type: environments
+      #   type: string
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -52,4 +52,4 @@ jobs:
         echo "Hello ${{ github.event.inputs.name }}" 
         echo "Your favorite city is ${{ github.event.inputs.city }}"
         echo "Is your favorite color blue: ${{ github.event.inputs.fav-color-blue }}"
-        echo "Environment where this workflow is running - ${{ inputs.environment }}"
+        # echo "Environment where this workflow is running - ${{ inputs.environment }}"
